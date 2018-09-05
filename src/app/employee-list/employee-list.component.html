@@ -7,11 +7,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of employees">
+        <tr *ngFor="let e of employees ; let i = index;" [id]="'tr'+i">
             <!--<td>{{e.name}}</td>-->
             <!--<td>{{e.salary}}</td>-->
             <td [innerHtml]="e.name"></td>
-            <td [innerHtml]="e.salary"></td>
+            <!--<td [innerHtml]="e.salary" [style.color]="getSalaryColor(e)"></td>-->
+            <td [innerHtml]="e.salary" 
+                [ngClass]="{'salary-expensive': e.salary > 2000, 'salary-cheap': e.salary < 2000}"></td>
         </tr>
     </tbody>
 </table>

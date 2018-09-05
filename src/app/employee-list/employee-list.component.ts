@@ -15,4 +15,8 @@ export class EmployeeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  getSalaryColor(e) {
+    return e.salary > 2000 ? 'green' : null;
+  }
+
 }
