@@ -9,9 +9,17 @@ export class EmployeeNewComponent implements OnInit {
 
   name = 'Rafael';
 
+  employees = [];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addEmployee(event) {
+    console.warn(event);
+    this.employees.push(this.name);
+    console.log(this.employees);
   }
 
 }
