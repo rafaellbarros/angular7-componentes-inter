@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import employees from '../employees';
 
 @Component({
   selector: 'employee-new',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeNewComponent implements OnInit {
 
-  name = 'Rafael';
+  name = '';
+  salary = 0;
 
-  employees = [];
+  employees = employees;
 
   constructor() { }
 
@@ -18,7 +20,7 @@ export class EmployeeNewComponent implements OnInit {
 
   addEmployee(event) {
     console.warn(event);
-    this.employees.push(this.name);
+    this.employees.push({name: this.name, salary: this.salary});
     console.log(this.employees);
   }
 
