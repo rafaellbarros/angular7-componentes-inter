@@ -8,7 +8,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of employees ; let i = index;" [id]="'tr'+i">
+        <tr *ngFor="let e of employeeService.employees ; let i = index;" [id]="'tr'+i">
             <!--<td>{{e.name}}</td>-->
             <!--<td>{{e.salary}}</td>-->
             <td [innerHtml]="e.name"></td>
