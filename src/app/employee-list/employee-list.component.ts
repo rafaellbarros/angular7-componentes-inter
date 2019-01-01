@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { EmployeeService, Employee } from '../employee.service';
+import { EmployeeNewModalComponent } from '../employee-new-modal/employee-new-modal.component';
 
 @Component({
   selector: 'employee-list',
@@ -8,7 +9,17 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeListComponent implements OnInit {
 
-  constructor(public employeeService: EmployeeService) { }
+  @ViewChild(EmployeeNewModalComponent) // pegar uma referencia de um elemento
+  employeeNewModal: EmployeeNewModalComponent;
+
+  constructor(public employeeService: EmployeeService) {
+    console.log('> ', this.employeeNewModal);
+    setTimeout(() => {
+      console.log(this.employeeNewModal);
+      this.employeeNewModal.show();
+    }, 2000);
+
+  }
 
   ngOnInit() {
   }
