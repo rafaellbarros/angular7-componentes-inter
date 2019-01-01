@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { Employee } from './../employee.service';
+import { Employee, EmployeeService } from './../employee.service';
 
 declare const $;
 
@@ -16,9 +16,19 @@ export class EmployeeNewModalComponent implements OnInit {
     bonus: 0,
   }
 
-  constructor(private element: ElementRef) { }
+  constructor(
+    private element: ElementRef,
+    private employeeService: EmployeeService) { }
 
   ngOnInit() {
+  }
+
+  addEmployee(event) {
+    console.warn(event);
+    const bonus = this.employee.salary >= 1000 ? 0 : this.employee.bonus;
+    this.employeeService.employees.push({name: this.employee.name, salary: this.employee.salary, bonus: bonus});
+    console.log(this.employeeService.employees);
+    this.hide();
   }
 
   show() {
@@ -28,7 +38,13 @@ export class EmployeeNewModalComponent implements OnInit {
 
   private getDivModal(): HTMLElement {
     const nativeElement: HTMLElement = this.element.nativeElement;
-    return nativeElement.firstChild as HTMLElement;
+    return nativeElement.firstChild.firstChild as HTMLElement;
+  }
+
+
+  hide() {
+    const divModal = this.getDivModal();
+    $(divModal).modal('hide');
   }
 
 }

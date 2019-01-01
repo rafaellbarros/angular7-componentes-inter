@@ -13,15 +13,13 @@ export class EmployeeListComponent implements OnInit {
   employeeNewModal: EmployeeNewModalComponent;
 
   constructor(public employeeService: EmployeeService) {
-    console.log('> ', this.employeeNewModal);
-    setTimeout(() => {
-      console.log(this.employeeNewModal);
-      this.employeeNewModal.show();
-    }, 2000);
-
   }
 
   ngOnInit() {
+  }
+
+  openNewModal() {
+    this.employeeNewModal.show();
   }
 
   getSalaryColor(e) {
