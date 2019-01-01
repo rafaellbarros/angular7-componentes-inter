@@ -9,6 +9,10 @@ import { EmployeeNewModalComponent } from '../employee-new-modal/employee-new-mo
 })
 export class EmployeeListComponent implements OnInit {
 
+  employee: Employee;
+
+  showMessageSuccess = false;
+
   @ViewChild(EmployeeNewModalComponent) // pegar uma referencia de um elemento
   employeeNewModal: EmployeeNewModalComponent;
 
@@ -20,6 +24,12 @@ export class EmployeeListComponent implements OnInit {
 
   openNewModal() {
     this.employeeNewModal.show();
+  }
+
+  onNewEmployee(employee: Employee) {
+    console.log('employee: ', employee);
+    this.employee = employee;
+    this.showMessageSuccess = true;
   }
 
   getSalaryColor(e) {

@@ -1,4 +1,7 @@
 <div class="container">
+  <p [hidden]="!showMessageSuccess">
+    O empregado{{ employee?.name }} foi cadastrado com sucesso!
+  </p>
   <div class="row">
     <h1>Nossos empregados</h1>
     <p salaryColor="valor"></p>
@@ -37,4 +40,4 @@
 
 </div>
 
-<employee-new-modal></employee-new-modal>
+<employee-new-modal (onSubmit)="onNewEmployee($event)"></employee-new-modal>
