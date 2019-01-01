@@ -33,15 +33,14 @@ export class EmployeeEditModalComponent implements OnInit {
     $(divModal).modal('show');
   }
 
-  private getDivModal(): HTMLElement {
-    const nativeElement: HTMLElement = this.element.nativeElement;
-    return nativeElement.firstChild.firstChild as HTMLElement;
-  }
-
-
   hide() {
     const divModal = this.getDivModal();
     $(divModal).modal('hide');
+  }
+
+  private getDivModal(): HTMLElement {
+    const nativeElement: HTMLElement = this.element.nativeElement;
+    return nativeElement.firstChild.firstChild as HTMLElement;
   }
 
 }

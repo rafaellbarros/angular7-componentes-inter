@@ -33,7 +33,8 @@
           ></td>-->
           <td [innerHtml]="e.bonus"></td>
           <td>
-            <a href="javascript:void(0)" (click)="openEditModal(e)">Editar</a>
+            <a href="javascript:void(0)" (click)="openEditModal(e)">Editar</a> |
+            <a href="javascript:void(0)" (click)="openDestroyModal(e)">Excluir</a>
           </td>
         </tr>
       </tbody>
@@ -44,3 +45,4 @@
 
 <employee-new-modal (onSubmit)="onNewEmployee($event)"></employee-new-modal>
 <employee-edit-modal [employee]="employeeToEdit" (onSubmit)="onEditEmployee($event)"></employee-edit-modal>
+<employee-delete-modal [employee]="employeeToDelete" (onDestroy)="onDestroyEmployee($event)"></employee-delete-modal>
