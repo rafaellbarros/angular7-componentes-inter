@@ -14,6 +14,7 @@ export class EmployeeListComponent implements OnInit {
   employee: Employee;
   employeeToEdit: Employee;
   employeeToDelete: Employee;
+  data = new Date();
 
   showMessageSuccess = false;
 
