@@ -23,7 +23,7 @@
           [id]="'tr' + i"
         >
           <td [innerHtml]="e.name"></td>
-          <td [innerHtml]="e.salary" salaryColor="{{ e.salary }}"></td>
+          <td [innerHtml]="e.salary" [salaryColor]="e.salary"></td>
           <!--<td
             [innerHtml]="e.salary"
             [ngClass]="{
