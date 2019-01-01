@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <h1>Nossos empregados</h1>
-    <p salaryColor></p>
+    <p salaryColor="valor"></p>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -16,13 +16,14 @@
           [id]="'tr' + i"
         >
           <td [innerHtml]="e.name"></td>
-          <td
+          <td [innerHtml]="e.salary" salaryColor="{{ e.salary }}" x="valor"></td>
+          <!--<td
             [innerHtml]="e.salary"
             [ngClass]="{
               'salary-expensive': e.salary > 2000,
               'salary-cheap': e.salary < 2000
             }"
-          ></td>
+          ></td>-->
           <td [innerHtml]="e.bonus"></td>
         </tr>
       </tbody>
