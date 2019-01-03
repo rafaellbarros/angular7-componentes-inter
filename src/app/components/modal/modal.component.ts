@@ -12,11 +12,13 @@ export class ModalComponent implements OnInit {
   constructor(private element: ElementRef) { }
 
   ngOnInit() {
+    console.log('ngOnInit');
+    console.log('this -> ', this.element.nativeElement.firstChild);
   }
 
 
   show() {
-    $( this.divModal).modal('show');
+    $(this.divModal).modal('show');
   }
 
   hide() {
