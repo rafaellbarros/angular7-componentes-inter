@@ -1,24 +1,15 @@
 import { Injectable } from '@angular/core';
+import employees, { Employee } from '../models/employees';
 
-export interface Employee {
-  name: string;
-  salary: number;
-  bonus: number;
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  // employees: Employee[] = [];
-  employees: Employee[] = [
-    {name: 'Fulano da Silva', salary: 1000, bonus: 0},
-    {name: 'Cicrano da Silva', salary: 10000, bonus: 0},
-    {name: 'Beltrano da Silva', salary: 900, bonus: 5},
-];
 
   constructor() { }
 
+  public employees = employees;
 
   addEmployee(employee: Employee) {
     employee.bonus = employee.salary >= 1000 ? 0 : employee.bonus;

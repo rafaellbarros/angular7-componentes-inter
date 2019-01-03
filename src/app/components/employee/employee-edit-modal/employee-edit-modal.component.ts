@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, Output, EventEmitter, Input } from '@angular/core';
-import { Employee } from '../employee.service';
+import { Employee } from 'src/app/models/employees';
 
 declare const $;
 
