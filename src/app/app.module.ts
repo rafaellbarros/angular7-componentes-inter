@@ -13,6 +13,7 @@ import { EmployeeNewModalComponent } from './components/employee/employee-new-mo
 import { EmployeeEditModalComponent } from './components/employee/employee-edit-modal/employee-edit-modal.component';
 import { EmployeeDeleteModalComponent } from './components/employee/employee-delete-modal/employee-delete-modal.component';
 import { ComponenteInlineComponent } from './components/componente-inline/componente-inline.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ComponenteInlineComponent } from './components/componente-inline/compon
     EmployeeDeleteModalComponent,
     AlertSuccessComponent,
     MyCurrencyPipe,
-    ComponenteInlineComponent
+    ComponenteInlineComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
