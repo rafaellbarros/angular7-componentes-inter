@@ -1,5 +1,5 @@
 <form (submit)="addEmployee($event)">
-  <modal>
+  <modal (onHide)="fechou($event)" (onShow)="mostrou($event)">
         <h5 modal-title>Novo empregado</h5>
         <div modal-body>
           <div class="form-group">

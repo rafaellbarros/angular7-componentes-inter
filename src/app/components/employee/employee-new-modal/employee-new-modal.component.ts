@@ -35,4 +35,12 @@ export class EmployeeNewModalComponent extends Modalable implements OnInit {
     this.onSubmit.emit(employee);
     this.hide();
   }
+
+  fechou(event) {
+    console.log('fechou ', event);
+  }
+
+  mostrou(event) {
+    console.log('mostrou ', event);
+  }
 }
