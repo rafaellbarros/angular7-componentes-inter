@@ -26,6 +26,7 @@ export class EmployeeNewModalComponent extends Modalable implements OnInit {
   }
 
   ngOnInit() {
+    super.ngOnInit();
   }
 
   addEmployee(event) {
@@ -36,6 +37,7 @@ export class EmployeeNewModalComponent extends Modalable implements OnInit {
     this.hide();
   }
 
+  /*
   fechou(event) {
     console.log('fechou ', event);
   }
@@ -43,4 +45,5 @@ export class EmployeeNewModalComponent extends Modalable implements OnInit {
   mostrou(event) {
     console.log('mostrou ', event);
   }
+  */
 }

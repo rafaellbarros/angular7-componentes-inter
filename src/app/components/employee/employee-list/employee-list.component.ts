@@ -71,4 +71,12 @@ export class EmployeeListComponent implements OnInit {
     return e.salary > 2000 ? 'green' : null;
   }
 
+  fechou(event) {
+    console.log('fechou ', event);
+  }
+
+  mostrou(event) {
+    console.log('mostrou ', event);
+  }
+
 }
